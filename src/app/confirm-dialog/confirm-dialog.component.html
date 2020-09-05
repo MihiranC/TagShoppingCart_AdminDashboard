@@ -1,0 +1,40 @@
+<!-- <h1 mat-dialog-title>
+  {{title}}
+</h1>
+
+<div mat-dialog-content>
+  <p>{{message}}</p>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onDismiss()">No</button>
+  <button mat-raised-button color="primary" (click)="onConfirm()">Yes</button>
+</div> -->
+
+<div class="card card-primary" style="width: 700px !important; margin: 0px;">
+  <div class="card-header">
+      <h3 class="card-title">{{title}}</h3>
+  </div>
+  <div class="card-body">
+      <div class="row">
+          <div class="col-md-12 w-100">
+            <p>{{message}}</p>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="btn-group w-100">
+                  <span class="btn btn-dark col fileinput-button" (click)="onDismiss()">
+                      <i class="fas fa-thumbs-down"></i>
+                      <span>No</span>
+                  </span>
+                  <button type="reset" class="btn btn-info col cancel" (click)="onConfirm()">
+                      <i class="fas fa-thumbs-up"></i>
+                      <span>Yes</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

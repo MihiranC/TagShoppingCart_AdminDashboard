@@ -47,13 +47,16 @@ import { MatStepperModule } from '@angular/material/stepper'
 import {MatNativeDateModule} from '@angular/material/core';
 import { CommonLayoutComponent } from './common-layout/common-layout.component';
 import { RouterModule } from '@angular/router';
+
 import { LoginComponent } from './login/login.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommonLayoutComponent,
-    LoginComponent
+    LoginComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     FormsModule,
@@ -98,9 +101,10 @@ import { LoginComponent } from './login/login.component';
     MatToolbarModule,
     MatTooltipModule,
     MatStepperModule,
-    MatNativeDateModule,
+    MatNativeDateModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [MatButtonModule, MatDialogModule]
 })
 export class AppModule { }
