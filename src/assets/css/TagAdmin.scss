@@ -31,3 +31,26 @@
   color: white !important;
   font-size: larger !important;
 }
+
+.mat-column-Actions{
+  width: 100px !important;
+}
+
+.tbl-btn-group{
+  height: 35px !important;
+}
+
+//Dialog
+.custom-dialog-container .mat-dialog-container {
+  padding: 0px !important;
+}
+
+.custom-error-dialog-container .mat-dialog-container {
+  padding: 0px !important;
+}
+
+.custom-error-dialog-container .card-header{
+  background: linear-gradient(to right, #cc2626 0%, #f8f8f8 100%);
+  height: 50px !important;
+  border-bottom: 0px;
+}
