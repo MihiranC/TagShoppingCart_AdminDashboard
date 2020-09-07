@@ -29,6 +29,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  height: 0.5%;
 }
 
 .main-footer {
@@ -109,4 +110,30 @@
 // mat-label error style
 .card-login ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
   color: white!important;
+}
+
+
+
+@media (max-width: 576px) {
+  .centerDiv{
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    padding-top: 200px;
+  }
+
+  .card-login .brand-text{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 850px) {
+
+  .card-login .brand-text{
+    font-size: 27px !important;
+  }
+
+  .card-login .brand-image{
+    display: none;
+  }
 }

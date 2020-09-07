@@ -54,3 +54,8 @@
   height: 50px !important;
   border-bottom: 0px;
 }
+
+//Confirmation disable back
+.cdk-overlay-container{
+  z-index: 2000 !important;
+}

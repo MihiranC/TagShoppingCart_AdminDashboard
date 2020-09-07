@@ -156,7 +156,6 @@ export class DistrictComponent implements OnInit {
     const dialogData = new ConfirmDialogModel("Delete confirmation", message);
 
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
-      maxWidth: "700px",
       data: dialogData,
       panelClass: 'custom-error-dialog-container'
     });
