@@ -1,23 +1,22 @@
-.sidebar-dark-primary{
+.sidebar-dark-primary {
   background-color: rgba(26, 28, 34, 0.788) !important;
 }
 
-.wrapper{
+.wrapper {
   background-attachment: fixed;
   background-image: url(./../../assets/Images/Login.jpg) !important;
 }
 
-
-.content-wrapper{
+.content-wrapper {
   background-color: transparent;
   min-height: calc(100vh - calc(3.3rem + 1px));
 }
 
-.content-wrapper .row{
+.content-wrapper .row {
   // min-height: calc(100vh - calc(3.3rem + 1px));
 }
 
-.centerDiv{
+.centerDiv {
   margin: auto;
   width: 50%;
   padding: 10px;
@@ -25,11 +24,7 @@
 }
 
 .centerImage {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 0.5%;
+  display: none;
 }
 
 .main-footer {
@@ -40,15 +35,15 @@
   z-index: 1032;
 }
 
-.card-title{
+.card-title {
   font-size: 50px;
 }
 
-.card-header{
+.card-header {
   height: 70px !important;
 }
 
-.card-login .card-body{
+.card-login .card-body {
   background-color: rgba(27, 27, 31, 0.616) !important;
   color: white !important;
 }
@@ -57,7 +52,7 @@
   color: white !important;
 }
 
-.card-login .mat-label{
+.card-login .mat-label {
   color: white !important;
 }
 
@@ -67,73 +62,103 @@
   margin-left: 0px !important;
 }
 
-.brand-link{
-  padding : 0px !important
+.brand-link {
+  padding: 0px !important;
 }
 
 .card-login .mat-form-field-appearance-outline .mat-form-field-outline {
   color: white !important;
 }
 
-.brand-text{
+.brand-text {
   font-size: 30px !important;
 }
 
 //input outline color
-.card-login ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-  color: white!important;
+.card-login
+  ::ng-deep
+  .mat-form-field-appearance-outline
+  .mat-form-field-outline {
+  color: white !important;
   // opacity: 1!important;
 }
 
 // mat-input error outline color
-.card-login ::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
-  color: white!important;
-  opacity: 0.8!important;
+.card-login
+  ::ng-deep
+  .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid
+  .mat-form-field-outline-thick {
+  color: white !important;
+  opacity: 0.8 !important;
 }
 
 // mat-input carent color
 .card-login ::ng-deep .mat-input-element {
-  caret-color: white!important;
+  caret-color: white !important;
 }
 
 // mat-input error carent color
-.card-login ::ng-deep .mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
-  caret-color: white!important;
+.card-login ::ng-deep .mat-form-field-invalid .mat-input-element,
+.mat-warn .mat-input-element {
+  caret-color: white !important;
 }
 
 // mat-label normal state style
 .card-login ::ng-deep .mat-form-field-label {
-  color: rgb(255, 255, 255)!important;
+  color: rgb(255, 255, 255) !important;
   // color: $mainColor!important;
 }
 
 // mat-label error style
-.card-login ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
-  color: white!important;
+.card-login
+  ::ng-deep
+  .mat-form-field.mat-form-field-invalid
+  .mat-form-field-label {
+  color: white !important;
 }
 
-
-
 @media (max-width: 576px) {
-  .centerDiv{
+  .centerDiv {
     margin: auto;
     width: 90%;
     padding: 10px;
-    padding-top: 200px;
   }
 
-  .card-login .brand-text{
+  .card-login .brand-text {
     font-size: 10px;
+  }
+
+  .centerImage {
+    padding-top: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-align: center;
   }
 }
 
 @media (max-width: 850px) {
-
-  .card-login .brand-text{
+  .card-login .brand-text {
     font-size: 27px !important;
   }
 
-  .card-login .brand-image{
+  .centerDiv {
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+  }
+
+  .centerImage {
+    padding-top: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-align: center;
+  }
+
+  .card-login .brand-image {
     display: none;
   }
 }
