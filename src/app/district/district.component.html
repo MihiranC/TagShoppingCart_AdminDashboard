@@ -29,7 +29,7 @@
                   <i class="fas fa-plus"></i>
                   <span>{{OperationBtnText}}</span>
                 </button>
-                <button class="btn btn-warning col cancel" (click)="clearForm()">
+                <button class="btn btn-warning col cancel" type="button" (click)="clearForm()">
                   <i class="fas fa-times-circle"></i>
                   <span>Clear</span>
                 </button>
@@ -47,10 +47,13 @@
       </div>
       <div class="card-body">
         <div class="mat-elevation-z8">
-          <mat-form-field style="padding: 10px; right: 0px;">
-            <mat-label>Filter</mat-label>
-            <input matInput (keyup)="applyFilter($event)" #input>
-          </mat-form-field>
+          <div style="text-align: right;">
+            <mat-form-field style="padding: 10px; width: 60%;">
+              <mat-icon matSuffix>search</mat-icon>
+              <mat-label>Filter</mat-label>
+              <input matInput (keyup)="applyFilter($event)" #input>
+            </mat-form-field>
+          </div>
           <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100">
 
             <!--- Note that these columns can be defined in any order.

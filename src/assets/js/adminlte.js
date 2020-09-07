@@ -495,7 +495,9 @@
 
 
     $(window).on('load', function () {
-      Layout._jQueryInterface.call($('body'));
+      setTimeout(() => {
+        Layout._jQueryInterface.call($('body'));
+      }, 500);
     });
     $(Selector.SIDEBAR + ' a').on('focusin', function () {
       $(Selector.MAIN_SIDEBAR).addClass(ClassName.SIDEBAR_FOCUSED);
@@ -904,9 +906,10 @@
 
     $(window).on(Event.LOAD_DATA_API, function () {
       $(Selector.DATA_WIDGET).each(function () {
-        Treeview._jQueryInterface.call($(this), 'init');
+          Treeview._jQueryInterface.call($(this), 'init');
       });
     });
+
     /**
      * jQuery API
      * ====================================================
@@ -922,6 +925,13 @@
 
     return Treeview;
   }(jQuery);
+
+  ////Added By Chamikara
+  $(document).ready(function(){
+    setTimeout(() => {
+        Treeview._jQueryInterface.call($(this), 'init');
+    }, 1000);
+  })
 
   /**
    * --------------------------------------------
