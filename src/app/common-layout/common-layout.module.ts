@@ -6,6 +6,8 @@ import { UserComponent } from '../user/user.component';
 import { HttpClientModule  } from '@angular/common/http';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { DistrictComponent } from '../district/district.component';
+import { StockMainComponent } from '../stock-main/stock-main.component';
+import { StockWiseImagesComponent } from '../stock-wise-images/stock-wise-images.component';
 
 import { Routes, RouterModule } from '@angular/router';
 
@@ -48,12 +50,19 @@ import { MatStepperModule } from '@angular/material/stepper'
 import {MatNativeDateModule} from '@angular/material/core';
 import { CommonLayoutComponent } from './common-layout.component';
 import {MatFormFieldModule} from '@angular/material/form-field'
+import { MaterialFileUploadComponent } from '../material-file-upload/material-file-upload.component';
+import { MaterialFileUploadSingleComponent } from '../material-file-upload-single/material-file-upload-single.component';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 @NgModule({
   declarations: [
     UserComponent,
     DashboardComponent,
     DistrictComponent,
+    StockMainComponent,
+    MaterialFileUploadComponent,
+    MaterialFileUploadSingleComponent,
+    StockWiseImagesComponent
   ],
   imports: [
     CommonModule,
@@ -92,6 +101,7 @@ import {MatFormFieldModule} from '@angular/material/form-field'
     MatStepperModule,
     MatNativeDateModule,
     RouterModule.forChild(CommonLayoutRoutes),
+    ColorPickerModule
   ],
   providers: [],
   exports: [RouterModule]

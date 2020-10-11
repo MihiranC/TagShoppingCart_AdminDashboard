@@ -3,6 +3,9 @@ import { PagesService } from '../Services/Pages.service';
 import { PageHeaders } from '../Models/PageHeaders';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { Route } from '@angular/router';
+import * as $ from 'jquery';
+import * as AdminLte from './../../assets/js/adminlte';
+declare const require: any;
 
 @Component({
   selector: 'app-common-layout',
@@ -24,6 +27,11 @@ export class CommonLayoutComponent implements OnInit {
     this.location = location;
   }
 
+  ngAfterViewInit() {
+    //We loading the player script on after view is loaded
+    require('../../assets/js/adminlte.js');
+  }
+
   ngOnInit(): void {
     var title = this.location.prepareExternalUrl(this.location.path()).replace("#", "");
     if(title=="#/"){
@@ -34,7 +42,15 @@ export class CommonLayoutComponent implements OnInit {
     else{
       this.toggleMenu();
     }
+    // $(document).ready(() => {
+    //   setTimeout(() => {
+    //     $('[data-widget="treeview"]').each(function() {
+    //       AdminLte.Treeview._jQueryInterface.call($(this), 'init');
+    //   });
+    //   }, 200);
+    // });
   }
+
 
   toggleMenu() {
     var title = this.location.prepareExternalUrl(this.location.path()).replace("#", "");

@@ -9,7 +9,7 @@ export class GlobalParametersService {
 
   constructor() {
     this.primaryAdminAPI = 'http://localhost:55011/'
-    this.primarySCAPI = 'http://192.168.1.93:6559/';
+    this.primarySCAPI = 'https://localhost:44302/';
 
     // mihiran
   }

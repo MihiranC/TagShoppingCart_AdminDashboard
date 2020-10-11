@@ -428,13 +428,13 @@
           setInterval(this.fixLoginRegisterHeight, this._config.loginRegisterAutoHeight);
         }
 
-        $(Selector.SIDEBAR).on('collapsed.lte.treeview expanded.lte.treeview', function () {
+        $(document).on('collapsed.lte.treeview expanded.lte.treeview',Selector.SIDEBAR, function () {
           _this.fixLayoutHeight();
         });
-        $(Selector.PUSHMENU_BTN).on('collapsed.lte.pushmenu shown.lte.pushmenu', function () {
+        $(document).on('collapsed.lte.pushmenu shown.lte.pushmenu',Selector.PUSHMENU_BTN, function () {
           _this.fixLayoutHeight();
         });
-        $(Selector.CONTROL_SIDEBAR_BTN).on('collapsed.lte.controlsidebar', function () {
+        $(document).on('collapsed.lte.controlsidebar',Selector.CONTROL_SIDEBAR_BTN, function () {
           _this.fixLayoutHeight();
         }).on('expanded.lte.controlsidebar', function () {
           _this.fixLayoutHeight('control_sidebar');
@@ -499,10 +499,10 @@
         Layout._jQueryInterface.call($('body'));
       }, 500);
     });
-    $(Selector.SIDEBAR + ' a').on('focusin', function () {
+    $(document).on('focusin',Selector.SIDEBAR + ' a', function () {
       $(Selector.MAIN_SIDEBAR).addClass(ClassName.SIDEBAR_FOCUSED);
     });
-    $(Selector.SIDEBAR + ' a').on('focusout', function () {
+    $(document).on('focusout',Selector.SIDEBAR + ' a', function () {
       $(Selector.MAIN_SIDEBAR).removeClass(ClassName.SIDEBAR_FOCUSED);
     });
     /**
@@ -927,11 +927,11 @@
   }(jQuery);
 
   ////Added By Chamikara
-  $(document).ready(function(){
-    setTimeout(() => {
-        Treeview._jQueryInterface.call($(this), 'init');
-    }, 1000);
-  })
+  // $(document).ready(function(){
+  //   setTimeout(() => {
+  //       Treeview._jQueryInterface.call($(this), 'init');
+  //   }, 1000);
+  // })
 
   /**
    * --------------------------------------------
@@ -1650,13 +1650,13 @@
      */
 
 
-    $(Selector.DROPDOWN_MENU + ' ' + Selector.DROPDOWN_TOGGLE).on("click", function (event) {
+    $(document).on("click",Selector.DROPDOWN_MENU + ' ' + Selector.DROPDOWN_TOGGLE, function (event) {
       event.preventDefault();
       event.stopPropagation();
 
       Dropdown._jQueryInterface.call($(this), 'toggleSubmenu');
     });
-    $(Selector.NAVBAR + ' ' + Selector.DROPDOWN_TOGGLE).on("click", function (event) {
+    $(document).on("click",Selector.NAVBAR + ' ' + Selector.DROPDOWN_TOGGLE, function (event) {
       event.preventDefault();
       setTimeout(function () {
         Dropdown._jQueryInterface.call($(this), 'fixPosition');
