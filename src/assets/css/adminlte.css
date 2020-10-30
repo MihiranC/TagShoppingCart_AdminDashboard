@@ -148,7 +148,7 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #d3ad05;
   text-decoration: none;
   background-color: transparent;
 }
@@ -12092,7 +12092,7 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
 }
 
 [class*='sidebar-dark-'] .nav-treeview > .nav-item > .nav-link {
-  color: rgb(200, 216, 245);
+  color: rgb(245, 244, 200);
 }
 
 [class*='sidebar-dark-'] .nav-treeview > .nav-item > .nav-link:hover, [class*='sidebar-dark-'] .nav-treeview > .nav-item > .nav-link:focus {
