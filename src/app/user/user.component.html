@@ -1,6 +1,6 @@
 
 
-<button mat-stroked-button (click)="ErrorMsg()" aria-label="Show an example snack-bar">
+<!-- <button mat-stroked-button (click)="ErrorMsg()" aria-label="Show an example snack-bar">
   error
 </button>
 <button mat-stroked-button (click)="SuccessMsg()" aria-label="Show an example snack-bar">
@@ -14,8 +14,202 @@
 </button>
 <button mat-stroked-button (click)="Msg()" aria-label="Show an example snack-bar">
   msg
-</button>
-<button mat-raised-button color="primary" (click)="confirmDialog()">Confirm</button>
+</button> -->
+<!-- <button mat-raised-button color="primary" (click)="confirmDialog()">Confirm</button>
+<br> -->
+<!-- Response is: {{result}}
 <br>
-Response is: {{result}}
+<br> -->
+
+<!-- added with users -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Fill User Details</h3>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="UserForm" (submit)="onSubmit()">
+          <div class="row" style="display: none;">
+            <!-- <div class="col-md-8">
+              <mat-form-field class="w-100">
+                <mat-label>User ID</mat-label>
+                <input matInput type="text" formControlName="userID">
+              </mat-form-field>
+            </div> -->
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <mat-form-field class="w-100">
+                <mat-label>User Name</mat-label>
+                <input matInput type="text" formControlName="username" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field class="w-100">
+                <mat-label>Mobile Number</mat-label>
+                <input matInput type="text" formControlName="mobileNo" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field class="w-100">
+                <mat-label>E mail Address</mat-label>
+                <input matInput type="text" formControlName="email" required>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field class="w-100">
+                <mat-label>First Name</mat-label>
+                <input matInput type="text" formControlName="firstName" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field class="w-100">
+                <mat-label>Last Name</mat-label>
+                <input matInput type="text" formControlName="lastName" required>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field class="w-100">
+                <mat-label>Address Line 01</mat-label>
+                <input matInput type="text" formControlName="addressLine1" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field class="w-100">
+                <mat-label>Address Line 02</mat-label>
+                <input matInput type="text" formControlName="addressLine2" >
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field class="w-100">
+                <mat-label>Address Line 03</mat-label>
+                <input matInput type="text" formControlName="addressLine3">
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field class="w-100">
+                <mat-label>Address Line 04</mat-label>
+                <input matInput type="text" formControlName="addressLine4">
+              </mat-form-field>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+              <div class="col-lg-12">
+                <div class="btn-group w-100">
+                  <button class="btn btn-success col fileinput-button" type="submit" [disabled]="UserForm.invalid">
+                    <i class="fas fa-plus"></i>
+                    <span>{{OperationBtnText}}</span>
+                  </button>
+                  <button class="btn btn-warning col cancel" type="button" (click)="clearForm()">
+                    <i class="fas fa-times-circle"></i>
+                    <span>Clear</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="col-md-12">
+  <div class="card card-primary">
+    <div class="card-header">
+      <h3 class="card-title">Existing Users</h3>
+    </div>
+    <div class="card-body">
+      <div class="mat-elevation-z8">
+        <div style="text-align: right;">
+          <mat-form-field style="padding: 10px; width: 40%;">
+            <mat-icon matSuffix>search</mat-icon>
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" #input>
+          </mat-form-field>
+        </div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100">
+
+          <!--- Note that these columns can be defined in any order.
+                        The actual rendered columns are set as a property on the row definition" -->
+
+          <!-- name Column -->
+          <!-- <ng-container matColumnDef="User Name">
+            <th mat-header-cell *matHeaderCellDef class="table-Col-Header" > User Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+          </ng-container> -->
+          <ng-container matColumnDef="First Name">
+            <th mat-header-cell *matHeaderCellDef class="table-Col-Header" > First Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Last Name">
+            <th mat-header-cell *matHeaderCellDef class="table-Col-Header" > Last Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Mobile Number">
+            <th mat-header-cell *matHeaderCellDef class="table-Col-Header"> Mobile Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.mobileNo}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Address">
+            <th mat-header-cell *matHeaderCellDef class="table-Col-Header"> Email Address</th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Actions" >
+            <th mat-header-cell class="table-Col-Header header-align-right"
+              *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let row">
+              <!-- <button mat-icon-button (click)="selectDataToForm(row)">
+                <mat-icon>launch</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="onActionDelete(row)">
+                <mat-icon>delete_outline</mat-icon>
+              </button> -->
+              <div class="btn-group w-100 tbl-btn-group">
+                <button class="btn btn-dark" (click)="selectDataToForm(row)" style="width:50%">
+                  <i class="fa fa-clipboard"></i>
+                </button>
+                <button class="btn btn-danger" (click)="confirmDialog(row)" style="width:50%">
+                  <i class="fa fa-eraser"></i>
+                </button>
+              </div>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns" class="table-Row"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
 

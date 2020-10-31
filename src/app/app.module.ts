@@ -50,13 +50,19 @@ import { RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommonLayoutComponent,
     LoginComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    SignUpComponent,
+    ChangePasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     FormsModule,
