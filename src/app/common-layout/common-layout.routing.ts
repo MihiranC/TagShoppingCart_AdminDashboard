@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserComponent } from '../user/user.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { DistrictComponent } from '../district/district.component';
+import { SignUpComponent } from '../sign-up/sign-up.component';
+
 import { StockMainComponent } from '../stock-main/stock-main.component';
 import { StockWiseImagesComponent } from '../stock-wise-images/stock-wise-images.component';
 

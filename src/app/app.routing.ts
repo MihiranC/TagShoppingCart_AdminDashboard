@@ -4,6 +4,9 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonLayoutComponent } from './common-layout/common-layout.component';
 import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes =[
   {
@@ -22,6 +25,18 @@ const routes: Routes =[
   {
     path: 'Login',
     component: LoginComponent
+  },
+  {
+    path: 'ResetPassword',
+    component: ResetPasswordComponent
+  },
+  {
+    path: 'ForgotPassword',
+    component: ChangePasswordComponent
+  },
+  {
+    path: 'SignUp/:encrpUserName',
+    component: SignUpComponent
   }
 ];
 

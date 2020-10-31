@@ -5,4 +5,6 @@ export class Login {
         encryptedusername: string;
         isvalid: boolean;
 
+        type: string;
+        userInput: string;
 }
