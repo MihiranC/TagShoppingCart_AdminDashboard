@@ -53,7 +53,9 @@ LoginList: Login[];
         .subscribe(data => {
           console.log('districtObject', data)
           if (data.code == "1000") {
-            this.Router.navigate(['/Dashboard']);
+            this.Router.navigate(['/Dashboard']).then(() => {
+              window.location.reload();
+            });;
             //this.alertService.showSuccess('Welcome to DashBoard')
             this.clearForm();
 

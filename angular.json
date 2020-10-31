@@ -35,7 +35,7 @@
               "src/assets/plugins/jquery/jquery.min.js",
               "src/assets/plugins/jquery-ui/jquery-ui.min.js",
               "src/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js",
-              "src/assets/js/adminlte.js"
+              "src/assets/js/tweenMax.js"
             ]
           },
           "configurations": {
