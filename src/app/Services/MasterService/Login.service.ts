@@ -45,9 +45,15 @@ export class LoginService {
   }
 
 //verified User Credentials
-  verifiedUserCredentials(username: string, password: string): Observable<any> {
-    return this.HTTPRequests.RequestGET(`${this.GlobalParameters.primaryAdminAPI}api/TGAdmin/Login/Select?username=${username}&password=${password}`);
+  // verifiedUserCredentials(username: string, password: string): Observable<any> {
+  //   return this.HTTPRequests.RequestGET(`${this.GlobalParameters.primaryAdminAPI}api/TGAdmin/Login/Select?username=${username}&password=${password}`);
+  // }
+
+  //UserProcessFirstSignup
+  verifiedUserCredentials(loginObject: Login ): Observable<any> {
+    return this.HTTPRequests.RequestPOST(loginObject, `${this.GlobalParameters.primaryAdminAPI}api/TGAdmin/Login/UserCheckLogin`)
   }
+
 
   //change Password Request
   ChangePasswordForUserRequest(userInput: string ): Observable<any> {

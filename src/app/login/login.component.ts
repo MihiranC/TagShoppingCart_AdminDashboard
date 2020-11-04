@@ -49,7 +49,7 @@ LoginList: Login[];
 
     console.log('LoginObject',this.LoginObject)
 
-    this.LoginService.verifiedUserCredentials(this.LoginObject.username,this.LoginObject.password)
+    this.LoginService.verifiedUserCredentials(this.LoginObject)
         .subscribe(data => {
           console.log('districtObject', data)
           if (data.code == "1000") {

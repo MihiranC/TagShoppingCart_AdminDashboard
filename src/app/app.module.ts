@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+//import { PhoneMaskDirective } from './phone-mask.directive';
 
 //Material
 
@@ -53,6 +54,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { TeacherComponent } from './teacher/teacher.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     ConfirmDialogComponent,
     SignUpComponent,
     ChangePasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    TeacherComponent,
+    //PhoneMaskDirective
   ],
   imports: [
     FormsModule,

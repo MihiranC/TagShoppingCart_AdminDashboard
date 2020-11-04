@@ -8,6 +8,7 @@ import { SignUpComponent } from '../sign-up/sign-up.component';
 
 import { StockMainComponent } from '../stock-main/stock-main.component';
 import { StockWiseImagesComponent } from '../stock-wise-images/stock-wise-images.component';
+import { TeacherComponent } from '../teacher/teacher.component';
 
 export const CommonLayoutRoutes: Routes = [
   {
@@ -37,6 +38,10 @@ export const CommonLayoutRoutes: Routes = [
   {
     path: 'StockWiseImages',
     component: StockWiseImagesComponent
-  }
+  },
+  {
+    path: 'Teacher',
+    component: TeacherComponent
+  },
 ];
 
