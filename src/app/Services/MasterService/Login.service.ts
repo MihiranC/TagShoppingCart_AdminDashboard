@@ -54,6 +54,7 @@ export class LoginService {
     return this.HTTPRequests.RequestPOST(loginObject, `${this.GlobalParameters.primaryAdminAPI}api/TGAdmin/Login/UserCheckLogin`)
   }
 
+  
 
   //change Password Request
   ChangePasswordForUserRequest(userInput: string ): Observable<any> {
